@@ -14,5 +14,12 @@ function getDefaultTextDirection(api) {
 
 function setTextDirection(direction) {
   document.documentElement.dir = direction;
-  document.body.className += ' ' + direction;
-}
+
+  if (direction === 'rtl') {
+    document.body.classList.add('rtl');
+  } else {
+    document.body.classList.remove('rtl');
+  }
+} // if(!document.body.classList.contains(direction)) {
+//   document.body.className += ' ' + direction;
+// }
