@@ -6,5 +6,6 @@ export function getDefaultTextDirection (api) {
 
 export function setTextDirection (direction) {
   document.documentElement.dir = direction;
-  document.documentElement.className += ' ' + direction;
+  document.documentElement.body.className += ' ' + direction;
+  document.body.className += ' ' + direction;
 }
